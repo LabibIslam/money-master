@@ -4,7 +4,21 @@ function inputValue(inputId){
 const priceInput = document.getElementById(inputId + '-input');
 let inputAmountText = priceInput.value;
 const inputAmount = parseFloat(inputAmountText);
-return inputAmount;
+if(typeof inputAmount == 'number' && inputAmount > 0){
+    return inputAmount;
+}
+
+/* error massage */
+
+else {
+    try {
+        alert("Please enter a correct number.");
+        }
+    catch(err) {
+        document.getElementById("error").innerHTML = err.message;
+        }
+}
+
 }
 
 /* total expence calculation */
@@ -21,9 +35,18 @@ function expence(){
 
 function reminingIncome(){
     const income = inputValue('income');
-    const expenceIncome = expence(); 
-    const totalBalance = income - expenceIncome;
+    const incomeExpence = expence(); 
+    const totalBalance = income - incomeExpence;
     return totalBalance;
+}
+
+/* remaining balance calculation */
+
+function precentage(){
+    const income = inputValue('income');
+    const saveAmount = inputValue('save');
+    const percentageAmount = income * saveAmount / 100;
+    return percentageAmount;
 }
 
 /* final expence & balance calculator */
@@ -39,18 +62,24 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
     balanceValue.innerText = balanceRemaining;
 });
 
+/* remaining balance calculation */
+function reminder(){
+    const balance = reminingIncome();
+    const saving = precentage();
+    const remainingBalance = balance - saving;
+    console.log(remainingBalance);
+    return remainingBalance;
+}
+
 /* percentage saving calculated */
 
 document.getElementById('save-btn').addEventListener('click', function(){
-    const income = inputValue('income');
-    const saveAmount = inputValue('save');
-    const percentageAmount = income * saveAmount / 100;
-    console.log(percentageAmount);
+    const savings = precentage();
     const saveValue = document.getElementById('saving-id');
     const saveValueText = saveValue.innerText;
-    saveValue.innerText = percentageAmount;
-
+    saveValue.innerText = savings;
+    const balanceRemain = reminder();
+    const balanceRemainValue = document.getElementById('remaining-id');
+    const balanceRemainText = balanceRemainValue.innerText;
+    balanceRemainValue.innerText = balanceRemain;
 });
-
-/* remaining balance calculation */
-
