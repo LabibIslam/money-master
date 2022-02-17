@@ -1,16 +1,19 @@
-/* header */
+/* header section */
 header {
   font-family: "Montserrat", sans-serif;
   color: #31a5ac;
 }
+/* main section */
 .main {
   font-family: "Roboto", sans-serif;
   margin-right: 0px;
 }
+/* calculate button */
 .calculate {
   background-color: #59a5ff;
   color: #ffffff;
 }
+/* save button */
 .save {
   background-color: #59a5ff;
   color: #ffffff;
