@@ -22,51 +22,52 @@
     <header>
         <h3 class="text-center text-5xl my-6">MONTH MANAGER</h3>
     </header>
-    <main class="mx-5 flex px-2 container">
-        <section class="w-3/4">
+    <main class="mx-5 flex justify-center px-2 main ">
+        <section class="w-4/6">
             <div class="">
                 <img src="images/main-iamge.jpg" alt="" >
             </div>
         </section>
-        <section class="text-center flex flex-col bg-blue-100 justify-center ">
+        <section class="text-center flex flex-col bg-blue-100 justify-center w-2/6">
             <div class="mt-2 ">
                 <h3>Income</h3>
                 <div class="mt-2">
-                    <span>Income:</span>
-                    <input class="rounded w-3/4 mb-4 px-2" type="number" name="" id="" placeholder="0">
+                    <span>Income: </span>
+                    <input class="rounded w-3/4 mb-4 px-2" type="text" name="" id="income-input" placeholder="0">
                 </div>
             </div>
             <div class="my-2">
                 <h3 class="mt-2">Expences</h3>
                 <div class="mt-2">
-                    <span>Food:</span>
-                    <input type="number" name="" id="" placeholder="0">
+                    <span>Food: </span>
+                    <input type="text" name="" id="food-input" placeholder="0">
                 </div>
                 <div class="mt-2">
-                    <span>Rent:</span>
-                    <input type="number" name="" id="" placeholder="0">
+                    <span>Rent: </span>
+                    <input type="text" name="" id="rent-input" placeholder="0">
                 </div >
                 <div class="mt-2">
-                    <span>Clothes:</span>
-                    <input type="number" name="" id="" placeholder="0">
+                    <span>Clothes: </span>
+                    <input type="text" name="" id="clothes-input" placeholder="0">
                 </div>
                 <div>
-                    <button class="calculate-btn px-8 rounded py-3 mt-2">Calculate</button>
+                    <button id="calculate-btn" class="calculate px-8 rounded py-3 mt-2">Calculate</button>
                 </div>
             </div>
             <div>
-                <h3>Total Expences:<span>00</span></h3>
-                <h3>Balance:<span></span>00</h3>
+                <h3>Total Expences: <span id="expence-id">00</span></h3>
+                <h3>Balance: <span id="balance-id">00</span></h3>
             </div>
             <div>
-                <span>Save:</span>
-                <input type="number" name="" id="">
-                <span>%</span>
-                <button class="save-btn px-3 rounded py-1">Save</button>
+                <h3>Save: 
+                    <input type="text" name="" id="save-input" placeholder="0">%
+                </h3>
+
+                <button id="save-btn" class="save mt-3 px-3 rounded py-1">Save</button>
             </div>
             <div>
-                <h3>Saving Amount:<span>00</span></h3>
-                <h3>Remaining Balance:<span>00</span></h3>
+                <h3>Saving Amount: <span id="saving-id">00</span></h3>
+                <h3>Remaining Balance: <span id="remaining-id">00</span></h3>
             </div>
         </section>
     </main>

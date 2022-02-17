@@ -3,15 +3,15 @@ header {
   font-family: "Montserrat", sans-serif;
   color: #31a5ac;
 }
-.container {
+.main {
   font-family: "Roboto", sans-serif;
   margin-right: 0px;
 }
-.calculate-btn {
+.calculate {
   background-color: #59a5ff;
   color: #ffffff;
 }
-.save-btn {
+.save {
   background-color: #59a5ff;
   color: #ffffff;
 }
