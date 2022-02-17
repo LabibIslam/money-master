@@ -1,2 +1,7 @@
-/* font-family: 'Montserrat', sans-serif; */
 /* font-family: 'Roboto', sans-serif; */
+/* header */
+header {
+  font-family: "Montserrat", sans-serif;
+  color: #31a5ac;
+  font-weight: 700;
+}
