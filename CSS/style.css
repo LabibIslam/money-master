@@ -1,7 +1,17 @@
-/* font-family: 'Roboto', sans-serif; */
 /* header */
 header {
   font-family: "Montserrat", sans-serif;
   color: #31a5ac;
-  font-weight: 700;
+}
+.container {
+  font-family: "Roboto", sans-serif;
+  margin-right: 0px;
+}
+.calculate-btn {
+  background-color: #59a5ff;
+  color: #ffffff;
+}
+.save-btn {
+  background-color: #59a5ff;
+  color: #ffffff;
 }
