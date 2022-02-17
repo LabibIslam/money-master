@@ -28,6 +28,15 @@ function expence(){
     const rentAmount = inputValue('rent');
     const clothesAmount = inputValue('clothes');
     const totalExpence = foodAmount + rentAmount + clothesAmount;
+    const income = inputValue('income');
+    if(totalExpence>income){
+    try {
+        alert("Please reduce expenditure");
+        }
+    catch(err) {
+        document.getElementById("error").innerHTML = err.message;
+        }
+    }
     return totalExpence;
 }
 
@@ -75,6 +84,15 @@ function reminder(){
 
 document.getElementById('save-btn').addEventListener('click', function(){
     const savings = precentage();
+    const income = reminingIncome();
+    if(savings>income){
+    try {
+        alert("Please enter a valid percentage");
+        }
+    catch(err) {
+        document.getElementById("error").innerHTML = err.message;
+        }
+    }
     const saveValue = document.getElementById('saving-id');
     const saveValueText = saveValue.innerText;
     saveValue.innerText = savings;
